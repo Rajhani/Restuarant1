@@ -8,52 +8,128 @@
     <style>
         .grid-container {
           display: grid;
-          grid-template-columns: auto auto auto auto auto;
+          grid-template-columns: auto auto auto auto auto auto auto;
+          grid-template-areas:  
+                                "a b c d e"
+                                "f f f f f g g"
+                                "f f f f f h h"                              
+                                "i j k l"
+                                "m"
+                                "n"
+                                "o p q r s t u"
+                                "v w x";
           background-color: #f321b1;
           padding: 10px;
         }
-        .grid-item {
-          background-color: rgba(247, 207, 7, 0.8);
-          border: 1px solid rgba(0, 0, 0, 0.8);
-          padding: 0px;
-          font-size: 30px;
+
+        .grid-container > div {
+          background-color: rgba(255, 255, 255, 0.8);
           text-align: center;
+          font-size: 30px;
         }
-        
-        .item2 { grid-area: 1 / 1 / span 2 / span 4 }
-        .item3 {
-            grid-area: 1 / 4 / span 1 / span 1; 
-            background-color: rgba(247, 207, 7, 0.8);
-          padding: 10px;
-          font-size: 30px;
-          text-align: center;}
-        .item4 {
-            grid-area: 3 / 4 / span 1 / span 1;
-            background-color: rgba(247, 207, 7, 0.8);
-          padding: 10px;
-          font-size: 30px;
-          text-align: center;}
-          .top-left {
-            position: absolute;
-            top: 300px;
-            left: 60px;
-            }
-            .top-left1 {
-            position: absolute;
-            top: 400px;
-            left: 60px;
-            }
+        .itema { grid-area: a; grid-column-start: 1;
+  grid-column-end: 1;
+  }
+        .itemb { grid-area: b; grid-column-start: 2;
+  grid-column-end: 2;}
+        .itemc { grid-area: c; grid-column-start: 3;
+  grid-column-end: 3;}
+        .itemd { grid-area: d; grid-column-start: 4;
+  grid-column-end: 4;}
+        .iteme { grid-area: e; grid-column-start: 5;
+  grid-column-end: 5;}
+  .itemf { grid-area: f; grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;}
+  .itemg { grid-area: g; grid-column-start: 5;
+  grid-column-end: 5; grid-row-start: 2;
+  grid-row-end: 2;}
+  .itemh { grid-area: h; grid-column-start: 5;
+  grid-column-end: 5;grid-row-start: 3;
+  grid-row-end: 3;}
+  .itemi {grid-area: i; grid-column-start: 1;
+  grid-column-end: 1; grid-row-start: 4; grid-row-end : 4;}
+  .itemj {grid-area: j; grid-column-start: 2;
+  grid-column-end: 2; grid-row-start: 4; grid-row-end : 4}
+  .itemk {grid-area: k; grid-column-start: 3;
+  grid-column-end: 3; grid-row-start: 4; grid-row-end : 4}
+  .iteml {grid-area: l; grid-column-start: 4;
+  grid-column-end: 4; grid-row-start: 4; grid-row-end : 4}
+  .itemm {grid-area: m; grid-column-start: 1;
+  grid-column-end: 7; grid-row-start: 5; grid-row-end : 5}
+  .itemn {grid-area: n; grid-column-start: 1;
+  grid-column-end: 7; grid-row-start: 6; grid-row-end : 6}
+  .itemo {grid-area: o; grid-column-start: 1;
+  grid-column-end: 1; grid-row-start: 7; grid-row-end : 7}  
+  .itemp {grid-area: p; grid-column-start: 2;
+  grid-column-end: 2; grid-row-start: 7; grid-row-end : 7}  
+  .itemq {grid-area: q; grid-column-start: 3;
+  grid-column-end: 3; grid-row-start: 7; grid-row-end : 7}  
+  .itemr {grid-area: r; grid-column-start: 4;
+  grid-column-end: 4; grid-row-start: 7; grid-row-end : 7}  
+  .items {grid-area: s; grid-column-start: 5;
+  grid-column-end: 5; grid-row-start: 7; grid-row-end : 7}  
+  .itemt {grid-area: t; grid-column-start: 6;
+  grid-column-end: 6; grid-row-start: 7; grid-row-end : 7}  
+  .itemu {grid-area: u; grid-column-start: 7;
+  grid-column-end: 7; grid-row-start: 7; grid-row-end : 7}  
+  .itemv {grid-area: v; grid-column-start: 1;
+  grid-column-end: 1; grid-row-start: 8; grid-row-end : 8} 
+  .itemw {grid-area: w; grid-column-start: 2;
+  grid-column-end: 2; grid-row-start: 8; grid-row-end : 8} 
+  .itemx {grid-area: x; grid-column-start: 3;
+  grid-column-end: 3; grid-row-start: 8; grid-row-end : 8} 
+
+
+
         </style>
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-item">TACOS</div>
-        <div class="grid-item">BEERS</div>
-        <div class="grid-item">WINES</div>
-        <div class="grid-item">DESSERTS</div>
-        <div class="grid-item">RESERVATIONS</div>
+        <div class="itema">TACOS</div>
+        <div class="itemb">BEERS</div>
+        <div class="itemc">WINES</div>
+        <div class="itemd">DESSERTS</div>
+        <div class="iteme">RESERVATIONS</div>
+        
     </div>
     <div class="grid-container">
+      <div class="itemf">
+          <img src="/images/taco.jpg" />
+      </div>
+      <div class="itemg"> $1.99 <br/> Tacos </div>
+      <div class="itemh"> $3.99 <br/> Kombucha</div>
+    </div>
+    <div class="grid-container">
+    <div class="itemi">Tacos<p>Loren ipsum dolor sit amet consectetur adipisicing elit.Animi,assumenda</p></div>
+    <div class="itemj">Beer<p>Loren ipsum dolor sit amet consectetur adipisicing elit.Animi,assumenda</p></div>
+    <div class="itemk">Wine<p>Loren ipsum dolor sit amet consectetur adipisicing elit.Animi,assumenda</p></div>
+    <div class="iteml">Music<p>Loren ipsum dolor sit amet consectetur adipisicing elit.Animi,assumenda</p></div>
+     </div>
+  
+     <div class="grid-container">
+      <div class="itemm"><img src="./images/queso-taco.png">Featured Taco<p>Slim Profile,easy to hold and loaded with cheese.<br> This is the one you have been waiting for</p></div>
+     </div>
+
+     <div class="grid-container">
+      <div class="itemn">Instant Grams</div>
+      </div>
+
+      <div class="grid-container">
+        <div class="itemo"><img src="./images/201x201.jpg"></div>
+        <div class="itemp"><img src="./images/202x202.jpg"></div>
+        <div class="itemq"><img src="./images/203x203.jpg"></div>
+        <div class="itemr"><img src="./images/204x204.jpg"></div>
+        <div class="items"><img src="./images/205x205.jpg"></div>
+        <div class="itemt"><img src="./images/206x206.jpg"></div>
+        <div class="itemu"><img src="./images/207x207.jpg"></div>
+        <div class="itemv"><img src="./images/207x208.jpg"></div>
+        <div class="itemw"><img src="./images/207x209.jpg"></div>
+        <div class="itemx"><img src="./images/207x210.jpg"></div>
+      </div>
+
+    <!--<div class="grid-container">
         <div class="item2">
             <img src="/images/taco.jpg" style="width:60%;"/>
             <div class="top-left" style="background-color:yellow ;">Terry's Taco Joint</div> 
@@ -61,6 +137,6 @@
         </div>
         <div class="item3"> $1.99 <br/> Tacos <br/> </div>
         <div class="item4"> $3.99 <br/> Kombucha</div> 
-    </div>
+    </div>-->
 </body>
 </html>
