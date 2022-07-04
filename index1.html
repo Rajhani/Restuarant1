@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto auto auto auto auto;
+          background-color: #f321b1;
+          padding: 10px;
+        }
+        .grid-item {
+          background-color: rgba(247, 207, 7, 0.8);
+          border: 1px solid rgba(0, 0, 0, 0.8);
+          padding: 0px;
+          font-size: 30px;
+          text-align: center;
+        }
+        
+        .item2 { grid-area: 1 / 1 / span 2 / span 4 }
+        .item3 {
+            grid-area: 1 / 4 / span 1 / span 1; 
+            background-color: rgba(247, 207, 7, 0.8);
+          padding: 10px;
+          font-size: 30px;
+          text-align: center;}
+        .item4 {
+            grid-area: 3 / 4 / span 1 / span 1;
+            background-color: rgba(247, 207, 7, 0.8);
+          padding: 10px;
+          font-size: 30px;
+          text-align: center;}
+          .top-left {
+            position: absolute;
+            top: 300px;
+            left: 60px;
+            }
+            .top-left1 {
+            position: absolute;
+            top: 400px;
+            left: 60px;
+            }
+        </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">TACOS</div>
+        <div class="grid-item">BEERS</div>
+        <div class="grid-item">WINES</div>
+        <div class="grid-item">DESSERTS</div>
+        <div class="grid-item">RESERVATIONS</div>
+    </div>
+    <div class="grid-container">
+        <div class="item2">
+            <img src="/images/taco.jpg" style="width:60%;"/>
+            <div class="top-left" style="background-color:yellow ;">Terry's Taco Joint</div> 
+            <div class="top-left1" style="background-color:yellow ;">Pretty Good Tacos!</div> 
+        </div>
+        <div class="item3"> $1.99 <br/> Tacos <br/> </div>
+        <div class="item4"> $3.99 <br/> Kombucha</div> 
+    </div>
+</body>
+</html>
